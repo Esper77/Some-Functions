@@ -40,8 +40,8 @@ bool itc_mirror_num(long long number){
 }
 
 int itc_mirror_count(long long number){
+    int counter = 0;
     while (number/10 > 0 || number % 10 > 0){
-        int counter = 0;
         if (itc_mirror_num(number))
                 counter++;
                 number--;
