@@ -45,6 +45,6 @@ int itc_mirror_count(long long number){
         if (itc_mirror_num(number))
                 counter++;
                 number--;
-        return counter;
     }
+    return counter;
 }
