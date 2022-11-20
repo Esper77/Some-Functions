@@ -28,7 +28,8 @@ double itc_pow(int num, int step) {
     long long counter ;
     if (step < 0) {
         counter = -1 * step;
-    }else{
+    }
+    else{
         counter = step;
     }
     for (long long i = 0; i < counter; ++i) {

@@ -8,8 +8,11 @@ void itc_num_print(int number){
 }
 
 int itc_len_num(long long number){
+    if (number == 0)
+        return 1;
     int counter;
     counter = 0;
+    number = itc_abs(number);
     if (number > 0){
     while (number/10 > 0){
         counter++;
@@ -23,13 +26,15 @@ int itc_len_num(long long number){
 
         }
     }
-    return counter;
+    return counter + 1;
 }
 
 int itc_sum_num(long long number){
+    if (number == 0)
+        return 0;
     int counter;
     counter = 0;
-    while (number/10 > 0){
+    while (number/10 > 0 || number % 10 > 0){
         counter = counter + number%10;
         number = number/10;
      }
@@ -39,7 +44,7 @@ int itc_sum_num(long long number){
 long long itc_multi_num(long long number){
     int counter;
     counter = 1;
-    while (number/10 > 0){
+    while (number/10 > 0 || number % 10 > 0){
         counter = counter * number%10;
         number = number/10;
      }
@@ -49,7 +54,7 @@ long long itc_multi_num(long long number){
 int itc_max_num(long long number){
     int max_num;
     max_num = 0;
-    while (number/10 > 0){
+    while (number/10 > 0 || number % 10 > 0){
         if (max_num < number % 10)
             max_num = number % 10;
         number = number/10;
