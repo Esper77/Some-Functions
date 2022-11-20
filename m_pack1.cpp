@@ -1,0 +1,59 @@
+#include "middle.h"
+#include "easy.h"
+#include <iostream>
+using namespace std;
+
+void itc_num_print(int number){
+    cout << number;
+}
+
+int itc_len_num(long long number){
+    int counter;
+    counter = 0;
+    if (number > 0){
+    while (number/10 > 0){
+        counter++;
+        number = number/10;
+        }
+    }
+    else {
+        while (number/10 < 0){
+        counter++;
+        number = number/10;
+
+        }
+    }
+    return counter;
+}
+
+int itc_sum_num(long long number){
+    int counter;
+    counter = 0;
+    while (number/10 > 0){
+        counter = counter + number%10;
+        number = number/10;
+     }
+     return counter;
+}
+
+long long itc_multi_num(long long number){
+    int counter;
+    counter = 1;
+    while (number/10 > 0){
+        counter = counter * number%10;
+        number = number/10;
+     }
+     return counter;
+}
+
+int itc_max_num(long long number){
+    int max_num;
+    max_num = 0;
+    while (number/10 > 0){
+        if (max_num < number % 10)
+            max_num = number % 10;
+        number = number/10;
+     }
+     return max_num;
+}
+
