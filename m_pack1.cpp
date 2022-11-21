@@ -32,8 +32,8 @@ int itc_len_num(long long number){
 int itc_sum_num(long long number){
     if (number == 0)
         return 0;
-    if number == (-2147483648)
-        return 40;
+    if (number == -29223372036854775808)
+        return 2+9+2+2+3+3+7+2+0+3+6+8+5+4+7+7+5+8+0+8;
     number = itc_abs(number);
     int counter;
     counter = 0;
@@ -45,7 +45,7 @@ int itc_sum_num(long long number){
 }
 
 long long itc_multi_num(long long number){
-    if number == (-29223372036854775808)
+    if (number == -29223372036854775808)
         return 0;
     number = itc_abs(number);
     int counter;
@@ -58,7 +58,7 @@ long long itc_multi_num(long long number){
 }
 
 int itc_max_num(long long number){
-    if number == (-9223372036854775808)
+    if (number == -9223372036854775808)
         return 9;
     number = itc_abs(number);
     int max_num;
