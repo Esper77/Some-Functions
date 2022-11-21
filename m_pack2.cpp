@@ -8,7 +8,7 @@ int itc_min_num(long long number){
         return 0;
     number = itc_abs(number);
     int min_num;
-    min_num = 9
+    min_num = 9;
     while (number/10 > 0 || number % 10 > 0){
         if (min_num < number % 10)
             min_num = number % 10;
@@ -24,7 +24,7 @@ int itc_rev_num(long long number){
     if (number == -9223372036854775808)
         return 8085774586302737229;
     if (number == itc_abs(number));
-        flag = 1
+        flag = 1;
     number = itc_abs(number);
     int out_num;
     out_num = 0;
