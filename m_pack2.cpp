@@ -4,7 +4,7 @@
 using namespace std;
 
 int itc_min_num(long long number){
-    if number == (-9223372036854775808)
+    if (number == -9223372036854775808)
         return 0;
     number = itc_abs(number);
     int min_num;
@@ -21,9 +21,9 @@ int itc_min_num(long long number){
 
 int itc_rev_num(long long number){
     bool flag = 0;
-    if number == (-9223372036854775808)
+    if (number == -9223372036854775808)
         return 8085774586302737229;
-    if number == itc_abs(number);
+    if (number == itc_abs(number));
         flag = 1
     number = itc_abs(number);
     int out_num;
@@ -38,7 +38,7 @@ int itc_rev_num(long long number){
 }
 
 int itc_null_count(long long number){
-    if number == (-9223372036854775808)
+    if (number == -9223372036854775808)
         return 2;
     number = itc_abs(number);
     int counter;
