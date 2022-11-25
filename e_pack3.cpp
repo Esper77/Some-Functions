@@ -42,11 +42,13 @@ double itc_pow(int num, int step) {
 }
 
 
-long long itc_reverse(long long num){
+long long itc_reverse(long long number){
     long long output = 0;
-    for(int x = 0; x < itc_len_num(num); x++){
-        output = output * 10 + num % 10;
-        num /= 10;
-    }
-    return output;
+	if (number < 0)
+		number *= -1;
+	while (number > 0) {
+		output = output * 10 + number % 10;
+		number /= 10;
+	}
+	return output;
 }

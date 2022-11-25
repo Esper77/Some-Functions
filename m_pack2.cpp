@@ -23,7 +23,7 @@ int itc_min_num(long long number){
 
 
 int itc_rev_num(long long number){
-    return itc_reverse(itc_len_num(number));
+    return itc_len_num(itc_reverse(number));
 }
 
 int itc_null_count(long long number){
@@ -44,7 +44,7 @@ int itc_null_count(long long number){
 }
 
 bool itc_mirror_num(long long number){
-    return (number == itc_rev_num(number));
+    return (number == itc_reverse(number));
 }
 
 int itc_mirror_count(long long number){
