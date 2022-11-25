@@ -30,44 +30,43 @@ int itc_len_num(long long number){
 }
 
 int itc_sum_num(long long number){
-    if (number == 0)
-        return 0;
-    if (number == -29223372036854775808)
-        return 2+9+2+2+3+3+7+2+0+3+6+8+5+4+7+7+5+8+0+8;
-    number = itc_abs(number);
-    int counter;
-    counter = 0;
-    while (number/10 > 0 || number % 10 > 0){
-        counter = counter + number%10;
-        number = number/10;
-     }
-     return counter;
+    long long sum = 0;
+	if (number < 0) {
+		number *= -1;
+	}
+	while (number > 0) {
+		sum += number % 10;
+		number /= 10;
+	}
+	return sum;
 }
 
 long long itc_multi_num(long long number){
-    if (number == -29223372036854775808)
-        return 0;
-    number = itc_abs(number);
-    int counter;
-    counter = 1;
-    while (number/10 > 0 || number % 10 > 0){
-        counter = counter * number%10;
-        number = number/10;
-     }
-     return counter;
+    long long mult = 1;
+	if (number == 0) {
+		return 0;
+	}
+	if (number < 0) {
+		number *= -1;
+	}
+	while (number > 0) {
+		mult *= number % 10;
+		number /= 10;
+	}
+	return mult;
 }
 
 int itc_max_num(long long number){
-    if (number == -9223372036854775808)
-        return 9;
-    number = itc_abs(number);
-    int max_num;
-    max_num = 0;
-    while (number/10 > 0 || number % 10 > 0){
-        if (max_num < number % 10)
-            max_num = number % 10;
-        number = number/10;
-     }
-     return max_num;
+    int max = 0;
+	if (number < 0) {
+		number *= -1;
+	}
+	while (number > 0) {
+		if (number % 10 > max) {
+			max = number % 10;
+		}
+		number /= 10;
+	}
+	return max;
 }
 
