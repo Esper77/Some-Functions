@@ -7,26 +7,19 @@ void itc_num_print(int number){
     cout << number;
 }
 
-int itc_len_num(long long number){
-    if (number == 0)
-        return 1;
-    int counter;
-    counter = 0;
-    number = itc_abs(number);
-    if (number > 0){
-    while (number/10 > 0){
-        counter++;
-        number = number/10;
-        }
-    }
-    else {
-        while (number/10 < 0){
-        counter++;
-        number = number/10;
-
-        }
-    }
-    return counter + 1;
+int itc_len_num(long long number) {
+	long long counter = 0;
+	if (number < 0) {
+		number *= -1;
+	}
+	if (number == 0) {
+		return 1;
+	}
+	while (number > 0) {
+		counter++;
+		number /= 10;
+	}
+	return counter;
 }
 
 int itc_sum_num(long long number){
