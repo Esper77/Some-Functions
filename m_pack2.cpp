@@ -22,7 +22,7 @@ int itc_min_num(long long number){
 
 
 
-int itc_rev_num(long long number){
+long long itc_rev_num(long long number){
     return itc_len_num(itc_reverse(number));
 }
 
